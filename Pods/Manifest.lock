@@ -1,0 +1,13 @@
+PODS:
+  - KVNProgress (2.2.1)
+  - PureLayout (3.0.1)
+
+DEPENDENCIES:
+  - KVNProgress (>= 2.2.1)
+  - PureLayout (>= 2.0.6)
+
+SPEC CHECKSUMS:
+  KVNProgress: 7001d2d16a2755cee5599e8e485befe056f2197b
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+
+COCOAPODS: 0.35.0

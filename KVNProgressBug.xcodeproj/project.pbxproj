@@ -12,9 +12,11 @@
 		3E4D33E31BF1D057004305B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D33E11BF1D057004305B1 /* Main.storyboard */; };
 		3E4D33E51BF1D057004305B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D33E41BF1D057004305B1 /* Assets.xcassets */; };
 		3E4D33E81BF1D057004305B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D33E61BF1D057004305B1 /* LaunchScreen.storyboard */; };
+		AD1D097FEF43290CB616BB14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50787411FDC05A8789BB82D0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30914A85085BDDB987447340 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3E4D33DA1BF1D057004305B1 /* KVNProgressBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVNProgressBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E4D33DD1BF1D057004305B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E4D33DF1BF1D057004305B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,9 @@
 		3E4D33E41BF1D057004305B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E4D33E71BF1D057004305B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E4D33E91BF1D057004305B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4D33EF1BF1D0F2004305B1 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		50787411FDC05A8789BB82D0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		59D93B34DF2B07A92D098AFA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1D097FEF43290CB616BB14 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,8 @@
 			children = (
 				3E4D33DC1BF1D057004305B1 /* KVNProgressBug */,
 				3E4D33DB1BF1D057004305B1 /* Products */,
+				AFC30794ABE92712F7F49CBB /* Pods */,
+				87E90B13F1C32B156CBFDBE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +68,26 @@
 				3E4D33E41BF1D057004305B1 /* Assets.xcassets */,
 				3E4D33E61BF1D057004305B1 /* LaunchScreen.storyboard */,
 				3E4D33E91BF1D057004305B1 /* Info.plist */,
+				3E4D33EF1BF1D0F2004305B1 /* BridgingHeader.h */,
 			);
 			path = KVNProgressBug;
+			sourceTree = "<group>";
+		};
+		87E90B13F1C32B156CBFDBE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50787411FDC05A8789BB82D0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFC30794ABE92712F7F49CBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59D93B34DF2B07A92D098AFA /* Pods.debug.xcconfig */,
+				30914A85085BDDB987447340 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +97,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E4D33EC1BF1D057004305B1 /* Build configuration list for PBXNativeTarget "KVNProgressBug" */;
 			buildPhases = (
+				E49105336F919B19B192006B /* Check Pods Manifest.lock */,
 				3E4D33D61BF1D057004305B1 /* Sources */,
 				3E4D33D71BF1D057004305B1 /* Frameworks */,
 				3E4D33D81BF1D057004305B1 /* Resources */,
+				BA06F93582E7BC64D6F414CB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +156,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA06F93582E7BC64D6F414CB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E49105336F919B19B192006B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E4D33D61BF1D057004305B1 /* Sources */ = {
@@ -244,23 +305,27 @@
 		};
 		3E4D33ED1BF1D057004305B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59D93B34DF2B07A92D098AFA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KVNProgressBug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.kubilayerdogan.KVNProgressBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = KVNProgressBug/BridgingHeader.h;
 			};
 			name = Debug;
 		};
 		3E4D33EE1BF1D057004305B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30914A85085BDDB987447340 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KVNProgressBug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.kubilayerdogan.KVNProgressBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = KVNProgressBug/BridgingHeader.h;
 			};
 			name = Release;
 		};
@@ -283,6 +348,7 @@
 				3E4D33EE1BF1D057004305B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
